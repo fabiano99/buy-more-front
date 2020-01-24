@@ -1,0 +1,13 @@
+  <a [routerLink]="['/produtos',produto.codigo]">
+    <div class="place-info-box">
+      <span class="place-info-box-icon">imagem</span>
+
+      <div class="place-info-box-content">
+        <span class="place-info-box-text">{{produto.nome}}</span>
+        <span class="place-info-box-star">{{produto.precoVenda | currency:'BRL': true}}</span>
+        <span class="place-info-box-detail">{{produto.descricao}}</span>
+      </div>
+      <!-- /.info-box-content -->
+    </div>
+  </a>
+  <!-- /.info-box -->

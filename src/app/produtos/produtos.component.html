@@ -1,0 +1,26 @@
+      <!-- INíCIO do CONTEÚDO -->
+      <section class="content-header">
+        <h1>
+          Todos os produtos
+        </h1>
+        <h5>
+        <form #form="ngForm">
+          <input type="search" name="busca" ngModel id="busca" placeholder="Buscar por nome">
+          <button (click)="produtoNome(form.value.busca)">Buscar</button>
+        </form>
+      </h5>
+      </section>
+
+
+      <section class="content">
+
+        <div class="row">
+                <div  *ngFor="let produto of produtos" class="col-sm-6 col-xs-12">
+                  <bm-produto [produto] = "produto"></bm-produto>
+
+              </div>
+        </div>
+
+      </section>
+
+      <!-- FIM  do CONTEÚDO -->

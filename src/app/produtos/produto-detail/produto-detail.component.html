@@ -1,0 +1,55 @@
+      <section class="content-header">
+        <h1>
+
+        </h1>
+      </section>
+
+
+      <section class="content">
+
+        <div class="row">
+            <div class="col-xs-12">
+              <div class="box box-solid">
+                <div class="box-header with-border">
+                  
+                  <h3 class="box-title">{{produto?.nome}}</h3><span class="pull-right">Qtd. {{produto?.quantidade}}</span>
+                 
+                </div>
+                <h3 class="box-title"><br> {{produto?.precoVenda | currency:'BRL': true}}</h3>
+               
+                <div class="box-body">
+                  <div class="col-sm-3 col-xs-12" *ngIf="produto">
+                    
+                  </div>
+
+                  <dl class="col-sm-9 col-xs-12">
+                    <dt>Categoria</dt>
+                    <dd>{{produto?.categoria}}</dd>
+                    <dt>Descrição</dt>
+                    <dd>{{produto?.descricao}}</dd>
+                    <dt>Qtd</dt>
+                    <dd>{{produto?.quantidade}}</dd>
+                  </dl>
+                </div>
+                <!-- /.box-body -->
+                <div class="box-footer detail-footer">
+                <a class="pull-left" routerLinkActive="detail-active" [routerLink]="['menu']">
+                   Vendas
+                </a>
+                <a class="pull-left" routerLinkActive="detail-active" [routerLink]="['edit']">
+                  Editar
+               </a>
+              </div>
+              </div>
+            </div>
+            <!-- /.col-xs-12 -->
+
+        </div>
+
+
+        <div class="row">
+          <router-outlet></router-outlet>
+      </div>
+
+      </section>
+      <!-- FIM DO CONTEÚDO -->

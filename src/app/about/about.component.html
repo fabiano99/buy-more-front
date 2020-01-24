@@ -1,0 +1,48 @@
+<div class="col-xs-12 col-sm-12">
+    <div class="box box-solid"> 
+      <div class="box-body">
+        <form  #form="ngForm" novalidate> 
+
+          <ul>
+            <li> 
+                <label for="codigo">Código</label><br>
+                <input type="number" min="0" name="codigo" required ngModel id="codigo">
+            </li>
+            <li> 
+                <label for="nome">Nome</label><br>
+                <input type="text" name="nome" ngModel required id="nome" >
+            </li>
+            <li> 
+                <label for="descricao">Descrição</label><br>
+                <input type="text" name="descricao" ngModel id="descricao" >
+            </li>
+            <li> 
+                <label for="peso">Peso</label><br>
+                <input type="number" name="peso" ngModel min="0" id="peso" >
+            </li>
+            <li> 
+                <label for="categoria">Categoria</label><br>
+                <input type="text" name="categoria" ngModel id="categoria" >
+            </li>
+            <li> 
+                <label for="icms">ICMS</label><br>
+                <input type="number" name="icms" ngModel min="0" id="icms" >
+            </li>
+            <li> 
+                <label for="precoCusto">Preço Custo</label><br>
+                <input type="number" min="0" name="precoCusto" ngModel required id="precoCusto" >
+            </li>
+            <li> 
+                <label for="precoVenda">Preço Venda</label><br>
+                <input type="number" min="0" name="precoVenda" ngModel required id="precoVenda" >
+            </li>
+            <li> 
+                <label for="quantidade">Quantidade</label><br>
+                <input type="number" name="quantidade" ngModel required id="quantidade">
+            </li>
+          </ul>
+          <button (click)="cadastrar(form.value)" [disabled]="!form.valid">Cadastrar</button>
+        </form>
+      </div>
+  </div>
+  

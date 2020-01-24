@@ -1,0 +1,1 @@
+export const BM_API = "http://localhost:3000"

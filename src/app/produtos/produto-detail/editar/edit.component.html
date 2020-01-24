@@ -1,0 +1,48 @@
+<div class="col-xs-8 col-sm-8">
+  <div class="box box-solid"> 
+    <div class="box-body">
+      <form #form="ngForm">
+        <ul>
+          <li> 
+              <label for="codigo">Código</label><br>
+              <input type="number" min="0" name="codigo"  readonly required id="codigo" [ngModel]="produto?.codigo">
+          </li>
+          <li> 
+              <label for="nome">Nome</label><br>
+              <input type="text" name="nome"  ngModel required id="nome" [ngModel]="produto?.nome">
+          </li>
+          <li> 
+              <label for="descricao">Descrição</label><br>
+              <input type="text" name="descricao" ngModel id="descricao" [ngModel]="produto?.descricao">
+          </li>
+          <li> 
+              <label for="peso">Peso</label><br>
+              <input type="number" name="peso" ngModel min="0" id="peso" [ngModel]="produto?.peso">
+          </li>
+          <li> 
+              <label for="categoria">Categoria</label><br>
+              <input type="text" name="categoria" ngModel id="categoria" [ngModel]="produto?.categoria">
+          </li>
+          <li> 
+              <label for="icms">ICMS</label><br>
+              <input type="number" name="icms" ngModel min="0" id="icms" [ngModel]="produto?.icms">
+          </li>
+          <li> 
+              <label for="precoCusto">Preço Custo</label><br>
+              <input type="number" min="0" name="precoCusto"  ngModel required id="precoCusto" [ngModel]="produto?.precoCusto">
+          </li>
+          <li> 
+              <label for="precoVenda">Preço Venda</label><br>
+              <input type="number" min="0" name="precoVenda"  ngModel required id="precoVenda" [ngModel]="produto?.precoVenda">
+          </li>
+          <li> 
+              <label for="quantidade">Quantidade</label><br>
+              <input type="number" name="quantidade"  ngModel required id="quantidade" [ngModel]="produto?.quantidade">
+          </li>
+          <button (click)="alterar(form.value)">Salvar</button>
+          <button (click)="apagar(form.value)">Apagar</button><br>
+        </ul>
+        
+      </form>
+    </div>
+</div>

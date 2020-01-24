@@ -1,0 +1,8 @@
+    <div class="col-md-12 col-xs-12">
+      <form #form="ngForm" novalidate>
+        <input type="hidden" name='codigo' ngModel [ngModel]="produto?.codigo">
+        <label for="qtd">Qtd.</label>
+        <input type="number" name="qtd"  id="qtd" [ngModel]="1" min="1" [max]="produto?.quantidade">
+        <button  (click)="comprar(produto, form)">COMPRAR</button>
+      </form>
+    </div>
